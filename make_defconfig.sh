@@ -12,7 +12,7 @@ if [ ! -e arch/arm/configs/$DEFCONFIG_FILE ]; then
 	exit -1
 fi
 
-# make .config
+# make .config test
 env KCONFIG_NOTIMESTAMP=true \
 make ARCH=arm CROSS_COMPILE=arm-eabi- ${DEFCONFIG_FILE}
 
